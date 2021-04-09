@@ -18,23 +18,8 @@ namespace MethodOverloadingExercise
             var num6 = int.Parse(Console.ReadLine());
             Console.WriteLine("Is this true or false?");
             var truth1 = Convert.ToBoolean(Console.ReadLine());
-        }
-        static int Add(int num1, int num2)
-        {
-            return num1 + num2;
-        }
-        static int Add(int num1, int num2, int num3, int num4, decimal dec1, decimal dec2)
-        {
-            
-            return num1 + num2 + num3 + num4;
-        }
-
-        static int Add(int num1, int num2, int num3, int num4, int num5, int num6, decimal dec1, decimal dec2, bool truth1)
-        {
-            
-            return num5 + num6;
             int sum = num5 + num6;
-            if (truth1 == true )
+            if (truth1 == true)
             {
                 Console.WriteLine(sum);
                 if (sum == 1)
@@ -45,9 +30,28 @@ namespace MethodOverloadingExercise
                 {
                     Console.WriteLine($"{sum} dollars");
                 }
-            
+
 
             }
+        }
+        public int Add(int num1, int num2)
+        {
+            return num1 + num2;
+        }
+        public int Add(int num1, int num2, int num3, int num4, decimal dec1, decimal dec2)
+        {
+            
+            return num1 + num2 + num3 + num4;
+        }
+
+        public int Add(int num1, int num2, int num3, int num4, int num5, int num6, decimal dec1, decimal dec2, bool truth1)
+        {
+            
+            return num5 + num6;
+            
+            
+       
+                
         }
     }
 }
